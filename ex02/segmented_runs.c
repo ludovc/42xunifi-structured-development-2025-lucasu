@@ -1,8 +1,13 @@
 #include <stdio.h>
 int	check_segment(const int *arr, int size)
 {
-	(void)arr;
-	printf("%d\n", size);
+	int		i;
+
+	i = 0;
+	while (i < size)
+	{
+		
+	}
 	return (1);
 }
 
