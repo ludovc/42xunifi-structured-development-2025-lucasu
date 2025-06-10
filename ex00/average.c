@@ -9,6 +9,8 @@ float	average(const int *arr, int size)
 	int		size_valid;
 	float	res;
 
+	res = 0;
+	size_valid = 0;
 	i = 0;
 	while (i < size)
 	{
