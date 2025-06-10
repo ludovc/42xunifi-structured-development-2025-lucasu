@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	valid_number(int nbr)
 {
 	return (nbr >= 0 && nbr <= 100);
@@ -26,6 +24,7 @@ float	average(const int *arr, int size)
 	return (res);
 }
 
+#include <stdio.h>
 int	main()
 {
 	int	arr[5] = {1, 2, 3, 4, 5};
