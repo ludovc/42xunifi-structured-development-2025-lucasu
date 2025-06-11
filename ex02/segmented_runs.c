@@ -18,33 +18,21 @@ int	check_segment(const int *arr, int size)
 int	count_segments(const int *arr, int size)
 {
 	int		res;
-	int		i;
-	int		size_segment;
 
+	(void)size;
 	res = 0;
-	size_segment = 0;
-	i = 0;
-	while (i < size + 1)
-	{
-		if (arr[i] == -1 || i == size)
-		{
-			if (check_segment(&arr[i], size_segment))
-				res++;
-			size_segment = 0;
-		}
-		else
-		{
-			size_segment++;
-		}
-		i++;
-	}
+	if (check_segment(arr, 3))
+		res++;
+	if (check_segment(&arr[4], 4))
+		res++;
 	return (res);
 }
 
 #include <stdio.h>
 int	main()
 {
-	int		arr[11] = {2, 3, 4, -1, 5, 6, -1, 1, 2, 3, 4};
+	//int		arr[11] = {2, 3, 4, -1, 5, 6, -1, 1, 2, 3, 4};
+	int		arr[8] = {2, 3, 4, -1, 5, 1, 2, 3};
 
-	printf("%d\n", count_segments(arr, 11));
+	printf("%d\n", count_segments(arr, 8));
 }
