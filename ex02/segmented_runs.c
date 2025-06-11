@@ -18,12 +18,18 @@ int	check_segment(const int *arr, int size)
 int	count_segments(const int *arr, int size)
 {
 	int		res;
+	int		size_segment;
+	int		start_segment;
 
 	(void)size;
 	res = 0;
-	if (check_segment(arr, 3))
+	start_segment = 0;
+	size_segment = 3;
+	if (check_segment(&arr[start_segment], size_segment))
 		res++;
-	if (check_segment(&arr[4], 4))
+	start_segment = 4;
+	size_segment = 4;
+	if (check_segment(&arr[start_segment], size_segment))
 		res++;
 	return (res);
 }
