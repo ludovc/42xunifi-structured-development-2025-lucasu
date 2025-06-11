@@ -4,11 +4,15 @@ int	check_segment(const int *arr, int size)
 	int		i;
 
 	i = 0;
-	while (i < size)
+	while (size - i >= 3)
 	{
-		
+		if (arr[i + 1] > arr[i] && arr[i + 2] > arr[i + 1])
+		{
+			return (1);
+		}
+		i++;
 	}
-	return (1);
+	return (0);
 }
 
 int	count_segments(const int *arr, int size)
