@@ -12,6 +12,8 @@ int	process_food_order(struct OrderRequest *request)
 	{
 		confirmation = create_preorder_confirmation();
 	}
+	if (!confirmation)
+		return (0);
 	send_confirmation_notification(confirmation);
 	return (1);
 }
