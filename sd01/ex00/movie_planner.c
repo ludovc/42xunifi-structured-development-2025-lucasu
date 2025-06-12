@@ -1,9 +1,15 @@
+#include "movie_planner.h"
+
 struct Plan *create_movie_night_plan(void)
 {
-	while (users)
-	{
-		new_movies = find_movies(get_user_preferences());
-		join_movies(new_movies, movies);
-	}
-	return (build_plan(movies));
+	struct Preferences	*prefs;
+	struct MovieList	*list;
+
+	prefs = get_user_preferences();
+	if (!prefs)
+		return (NULL);
+	list = find_movies(prefs);
+	if (!list)
+		return (NULL);
+	return (build_plan(list));
 }
